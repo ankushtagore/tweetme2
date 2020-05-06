@@ -16,7 +16,7 @@ def tweet_list_view(request, *args, **kwargs):
         Consume by JS or java or swift
         return json data
         """
-    tweets_list = [{"id":x.id, "content":x.content, "likes":random.randint(0,12314421)} for x in qs]
+    tweets_list = [{"id":x.id, "content":x.content, "likes":random.randint(0,123)} for x in qs]
     data = {
         "isUser": False,
         "response": tweets_list
