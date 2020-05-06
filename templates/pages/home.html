@@ -6,9 +6,22 @@ This is Amazing!!!
 
 {% block content %}
 
+
 <div class ='row text-center'>
     <div class="col">
         <h1> Welcome to Tweet me 2</h1>
+    </div>
+</div>
+
+
+<div class='row mb-4'>
+    <div class="col-md-4 mx-auto col-10">
+        <form class="form" method="POST" action="/create-tweet">
+            {% csrf_token %}
+            <input type='hidden' value='/' name='next' />
+            <textarea class="form-control" name="content" placeholder="What is in your mind"></textarea>
+            <button type='submit' class="btn btn-primary">Tweet</button>
+        </form>
     </div>
 </div>
 
